@@ -40,7 +40,7 @@ class RepositoriesViewModelTest: XCTestCase {
         XCTAssert(appCoordinator.showBranchesViewCalled)
     }
 
-    func testShouldOnlyFetchTenItems() {
+    func testShouldOnlyProcessTenItems() {
         repositoryService.repositoryResponse = .eleven
         repositoryService.fetchBranchesNumberOfCalls = 0
 
