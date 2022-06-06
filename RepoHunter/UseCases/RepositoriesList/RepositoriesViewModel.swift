@@ -9,15 +9,11 @@ import Foundation
 import Combine
 import UIKit
 
-struct RepositoryRepresentation {
-    let name: String
-    let branches: [Branch]
-}
-
 class RepositoriesViewModel {
     
     let repositoryService: RepositoryService
     weak var coordinator: AppCoordinator?
+
     @Published var repositories = [RepositoryRepresentation]()
     
     private var subscriptions = [AnyCancellable]()

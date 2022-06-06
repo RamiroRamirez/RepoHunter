@@ -107,16 +107,15 @@ extension RepositoriesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let repository = repositories[indexPath.row]
         guard
-            let cell = tableView.dequeueReusableCell(withIdentifier: "RepositoryCell") else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "RepositoryCell"),
+            let repository = repositories[safe: indexPath.row] else {
                 return UITableViewCell()
         }
 
         var content = cell.defaultContentConfiguration()
         content.text = repository.name
         content.secondaryText = "# of branches: \(repository.branches.count)"
-
         cell.contentConfiguration = content
         
         return cell
@@ -128,6 +127,10 @@ extension RepositoriesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        viewModel.showRepositoryBranches(repository: repositories[indexPath.row])
+        guard let repository = repositories[safe: indexPath.row] else {
+            return
+        }
+        
+        viewModel.showRepositoryBranches(repository: repository)
     }
 }
