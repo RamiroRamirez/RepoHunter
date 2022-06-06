@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 class AppCoordinator {
 
@@ -23,8 +24,10 @@ class AppCoordinator {
     }
 
     func showBranchesView(branches: [Branch]) {
-        let branchesViewController = BranchesViewController()
-        mainNavigationController.pushViewController(branchesViewController, animated: true)
+        let viewModel = BranchesViewModel(branches: branches)
+        let hostingViewController = UIHostingController(rootView: BranchesView(viewModel: viewModel))
+
+        mainNavigationController.pushViewController(hostingViewController, animated: true)
     }
 }
 

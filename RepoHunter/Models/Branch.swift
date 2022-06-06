@@ -7,6 +7,14 @@
 
 import Foundation
 
-class Branch: Decodable {
+class Branch: Decodable, Hashable {
     let name: String
+    
+    static func == (lhs: Branch, rhs: Branch) -> Bool {
+        return lhs.name == rhs.name
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
+    }
 }

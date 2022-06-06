@@ -24,6 +24,7 @@ class RepositoriesViewModel {
 
     init(repositoryService: RepositoryService, coordinator: AppCoordinator) {
         self.repositoryService = repositoryService
+        self.coordinator = coordinator
     }
 
     func searchRepositories(with name: String) {

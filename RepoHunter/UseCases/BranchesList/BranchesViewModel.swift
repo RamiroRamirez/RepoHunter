@@ -7,5 +7,11 @@
 
 import Foundation
 
-class BranchesViewModel {
+class BranchesViewModel: ObservableObject {
+    
+    var branches: [Branch]
+    
+    init(branches: [Branch]) {
+        self.branches = branches
+    }
 }

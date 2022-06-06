@@ -16,7 +16,7 @@ class RepositoriesViewController: UIViewController {
     private var subscriptions = [AnyCancellable]()
     
     let tableView : UITableView = {
-        let tableView = UITableView()
+        let tableView = UITableView(frame: CGRect.zero, style: .grouped)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
@@ -85,6 +85,12 @@ class RepositoriesViewController: UIViewController {
             }
             .store(in: &subscriptions)
     }
+
+    private func resetSearch() {
+        repositories.removeAll()
+        searchBar?.resignFirstResponder()
+        tableView.reloadData()
+    }
 }
 
 extension RepositoriesViewController: UISearchBarDelegate {
@@ -92,7 +98,8 @@ extension RepositoriesViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard
             let searchText = searchBar.text,
-            searchText.isEmpty == false else {
+            searchText.trimmingCharacters(in: .whitespaces).isEmpty == false else {
+                resetSearch()
                 return
         }
               
