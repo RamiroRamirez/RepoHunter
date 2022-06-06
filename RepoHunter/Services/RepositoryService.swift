@@ -23,7 +23,7 @@ class RepositoryService {
 
     convenience init() {
         self.init(
-            restClient: RestClient(),
+            restClient: RepoHunterClient(),
             urlConstructor: URLConstructor()
         )
     }

@@ -8,7 +8,15 @@
 import Foundation
 import Combine
 
-class RestClient {
+protocol RestClient {
+    func request<T: Decodable>(
+        url: URL,
+        method: HTTPMethod,
+        type: T.Type
+    ) -> AnyPublisher<T, Error>
+}
+
+class RepoHunterClient: RestClient {
     
     func request<T: Decodable>(
         url: URL,

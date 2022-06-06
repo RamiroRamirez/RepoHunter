@@ -10,9 +10,6 @@
 		F8002ACE284B709E0068ADA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8002ACD284B709E0068ADA2 /* AppDelegate.swift */; };
 		F8002AD7284B70A30068ADA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8002AD6284B70A30068ADA2 /* Assets.xcassets */; };
 		F8002ADA284B70A30068ADA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8002AD8284B70A30068ADA2 /* LaunchScreen.storyboard */; };
-		F8002AE5284B70A30068ADA2 /* RepoHunterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8002AE4284B70A30068ADA2 /* RepoHunterTests.swift */; };
-		F8002AEF284B70A30068ADA2 /* RepoHunterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8002AEE284B70A30068ADA2 /* RepoHunterUITests.swift */; };
-		F8002AF1284B70A30068ADA2 /* RepoHunterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8002AF0284B70A30068ADA2 /* RepoHunterUITestsLaunchTests.swift */; };
 		F8002AFE284B79990068ADA2 /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8002AFD284B79990068ADA2 /* RestClient.swift */; };
 		F8002B02284CBB660068ADA2 /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8002B01284CBB660068ADA2 /* Repositories.swift */; };
 		F8002B04284CBB800068ADA2 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8002B03284CBB800068ADA2 /* Repository.swift */; };
@@ -24,20 +21,16 @@
 		F8002B12284D2BF80068ADA2 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8002B11284D2BF80068ADA2 /* AppCoordinator.swift */; };
 		F8002B14284D2CBE0068ADA2 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8002B13284D2CBE0068ADA2 /* RepositoriesViewController.swift */; };
 		F8002B19284D473D0068ADA2 /* BranchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8002B18284D473D0068ADA2 /* BranchesViewModel.swift */; };
+		F8CF9B5F284E1D3B0040EFD6 /* MockAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CF9B5E284E1D3B0040EFD6 /* MockAppCoordinator.swift */; };
 		F8F78399284D792800F8F0D4 /* Array+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F78398284D792800F8F0D4 /* Array+Safe.swift */; };
 		F8F7839C284D7BFB00F8F0D4 /* RepositoryRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F7839B284D7BFB00F8F0D4 /* RepositoryRepresentation.swift */; };
 		F8F7839E284D7E0100F8F0D4 /* BranchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F7839D284D7E0100F8F0D4 /* BranchesView.swift */; };
+		F8F783A1284D891F00F8F0D4 /* RepositoriesViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F783A0284D891F00F8F0D4 /* RepositoriesViewModelTest.swift */; };
+		F8F783A3284D896700F8F0D4 /* MockRepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F783A2284D896700F8F0D4 /* MockRepositoryService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		F8002AE1284B70A30068ADA2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F8002AC2284B709E0068ADA2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F8002AC9284B709E0068ADA2;
-			remoteInfo = RepoHunter;
-		};
-		F8002AEB284B70A30068ADA2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F8002AC2284B709E0068ADA2 /* Project object */;
 			proxyType = 1;
@@ -53,10 +46,6 @@
 		F8002AD9284B70A30068ADA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8002ADB284B70A30068ADA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8002AE0284B70A30068ADA2 /* RepoHunterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepoHunterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8002AE4284B70A30068ADA2 /* RepoHunterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoHunterTests.swift; sourceTree = "<group>"; };
-		F8002AEA284B70A30068ADA2 /* RepoHunterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepoHunterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8002AEE284B70A30068ADA2 /* RepoHunterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoHunterUITests.swift; sourceTree = "<group>"; };
-		F8002AF0284B70A30068ADA2 /* RepoHunterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoHunterUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F8002AFD284B79990068ADA2 /* RestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
 		F8002B01284CBB660068ADA2 /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
 		F8002B03284CBB800068ADA2 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
@@ -68,9 +57,12 @@
 		F8002B11284D2BF80068ADA2 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F8002B13284D2CBE0068ADA2 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
 		F8002B18284D473D0068ADA2 /* BranchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchesViewModel.swift; sourceTree = "<group>"; };
+		F8CF9B5E284E1D3B0040EFD6 /* MockAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAppCoordinator.swift; sourceTree = "<group>"; };
 		F8F78398284D792800F8F0D4 /* Array+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Safe.swift"; sourceTree = "<group>"; };
 		F8F7839B284D7BFB00F8F0D4 /* RepositoryRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRepresentation.swift; sourceTree = "<group>"; };
 		F8F7839D284D7E0100F8F0D4 /* BranchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchesView.swift; sourceTree = "<group>"; };
+		F8F783A0284D891F00F8F0D4 /* RepositoriesViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModelTest.swift; sourceTree = "<group>"; };
+		F8F783A2284D896700F8F0D4 /* MockRepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositoryService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,13 +80,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F8002AE7284B70A30068ADA2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -103,7 +88,6 @@
 			children = (
 				F8002ACC284B709E0068ADA2 /* RepoHunter */,
 				F8002AE3284B70A30068ADA2 /* RepoHunterTests */,
-				F8002AED284B70A30068ADA2 /* RepoHunterUITests */,
 				F8002ACB284B709E0068ADA2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -113,7 +97,6 @@
 			children = (
 				F8002ACA284B709E0068ADA2 /* RepoHunter.app */,
 				F8002AE0284B70A30068ADA2 /* RepoHunterTests.xctest */,
-				F8002AEA284B70A30068ADA2 /* RepoHunterUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,18 +121,10 @@
 		F8002AE3284B70A30068ADA2 /* RepoHunterTests */ = {
 			isa = PBXGroup;
 			children = (
-				F8002AE4284B70A30068ADA2 /* RepoHunterTests.swift */,
+				F8F7839F284D88ED00F8F0D4 /* Mocks */,
+				F8F783A0284D891F00F8F0D4 /* RepositoriesViewModelTest.swift */,
 			);
 			path = RepoHunterTests;
-			sourceTree = "<group>";
-		};
-		F8002AED284B70A30068ADA2 /* RepoHunterUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F8002AEE284B70A30068ADA2 /* RepoHunterUITests.swift */,
-				F8002AF0284B70A30068ADA2 /* RepoHunterUITestsLaunchTests.swift */,
-			);
-			path = RepoHunterUITests;
 			sourceTree = "<group>";
 		};
 		F8002AFF284B87960068ADA2 /* HTTP */ = {
@@ -216,6 +191,15 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
+		F8F7839F284D88ED00F8F0D4 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				F8F783A2284D896700F8F0D4 /* MockRepositoryService.swift */,
+				F8CF9B5E284E1D3B0040EFD6 /* MockAppCoordinator.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -254,24 +238,6 @@
 			productReference = F8002AE0284B70A30068ADA2 /* RepoHunterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F8002AE9284B70A30068ADA2 /* RepoHunterUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F8002AFA284B70A30068ADA2 /* Build configuration list for PBXNativeTarget "RepoHunterUITests" */;
-			buildPhases = (
-				F8002AE6284B70A30068ADA2 /* Sources */,
-				F8002AE7284B70A30068ADA2 /* Frameworks */,
-				F8002AE8284B70A30068ADA2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F8002AEC284B70A30068ADA2 /* PBXTargetDependency */,
-			);
-			name = RepoHunterUITests;
-			productName = RepoHunterUITests;
-			productReference = F8002AEA284B70A30068ADA2 /* RepoHunterUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -286,10 +252,6 @@
 						CreatedOnToolsVersion = 13.3.1;
 					};
 					F8002ADF284B70A30068ADA2 = {
-						CreatedOnToolsVersion = 13.3.1;
-						TestTargetID = F8002AC9284B709E0068ADA2;
-					};
-					F8002AE9284B70A30068ADA2 = {
 						CreatedOnToolsVersion = 13.3.1;
 						TestTargetID = F8002AC9284B709E0068ADA2;
 					};
@@ -310,7 +272,6 @@
 			targets = (
 				F8002AC9284B709E0068ADA2 /* RepoHunter */,
 				F8002ADF284B70A30068ADA2 /* RepoHunterTests */,
-				F8002AE9284B70A30068ADA2 /* RepoHunterUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -326,13 +287,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F8002ADE284B70A30068ADA2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F8002AE8284B70A30068ADA2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -368,16 +322,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8002AE5284B70A30068ADA2 /* RepoHunterTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F8002AE6284B70A30068ADA2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F8002AF1284B70A30068ADA2 /* RepoHunterUITestsLaunchTests.swift in Sources */,
-				F8002AEF284B70A30068ADA2 /* RepoHunterUITests.swift in Sources */,
+				F8F783A1284D891F00F8F0D4 /* RepositoriesViewModelTest.swift in Sources */,
+				F8CF9B5F284E1D3B0040EFD6 /* MockAppCoordinator.swift in Sources */,
+				F8F783A3284D896700F8F0D4 /* MockRepositoryService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,11 +335,6 @@
 			isa = PBXTargetDependency;
 			target = F8002AC9284B709E0068ADA2 /* RepoHunter */;
 			targetProxy = F8002AE1284B70A30068ADA2 /* PBXContainerItemProxy */;
-		};
-		F8002AEC284B70A30068ADA2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F8002AC9284B709E0068ADA2 /* RepoHunter */;
-			targetProxy = F8002AEB284B70A30068ADA2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -616,42 +558,6 @@
 			};
 			name = Release;
 		};
-		F8002AFB284B70A30068ADA2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WEUMM3X4MB;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ramram.RepoHunter.RepoHunterUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = RepoHunter;
-			};
-			name = Debug;
-		};
-		F8002AFC284B70A30068ADA2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WEUMM3X4MB;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ramram.RepoHunter.RepoHunterUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = RepoHunter;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -678,15 +584,6 @@
 			buildConfigurations = (
 				F8002AF8284B70A30068ADA2 /* Debug */,
 				F8002AF9284B70A30068ADA2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F8002AFA284B70A30068ADA2 /* Build configuration list for PBXNativeTarget "RepoHunterUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F8002AFB284B70A30068ADA2 /* Debug */,
-				F8002AFC284B70A30068ADA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
