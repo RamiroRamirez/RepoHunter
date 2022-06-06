@@ -56,11 +56,6 @@ class RepositoriesViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "RepositoryCell")
-        
-        let backgroundLabel = UILabel()
-        backgroundLabel.text = "No search results for now!"
-        backgroundLabel.textAlignment = .center
-        tableView.backgroundView = backgroundLabel
 
         self.view.addSubview(tableView)
         
@@ -82,6 +77,7 @@ class RepositoriesViewController: UIViewController {
                 self?.repositories = repositories
                 self?.tableView.reloadData()
                 self?.searchBar?.resignFirstResponder()
+                self?.showNoBranchesBackground()
             }
             .store(in: &subscriptions)
     }
@@ -89,7 +85,25 @@ class RepositoriesViewController: UIViewController {
     private func resetSearch() {
         repositories.removeAll()
         searchBar?.resignFirstResponder()
+        showNoBranchesBackground()
         tableView.reloadData()
+    }
+    
+    private func showNoBranchesBackground() {
+        let backgroundLabel = UILabel()
+        backgroundLabel.text = "No search results for now!"
+        backgroundLabel.textAlignment = .center
+        tableView.backgroundView = backgroundLabel
+    }
+    
+    private func showActivityIndicator() {
+        let spinner = UIActivityIndicatorView(style: .medium)
+        spinner.startAnimating()
+        tableView.backgroundView = spinner
+    }
+
+    private func hideTableViewBackground() {
+        tableView.backgroundView = nil
     }
 }
 
@@ -102,7 +116,8 @@ extension RepositoriesViewController: UISearchBarDelegate {
                 resetSearch()
                 return
         }
-              
+          
+        showActivityIndicator()
         viewModel.searchRepositories(with: searchText)
     }
 }
