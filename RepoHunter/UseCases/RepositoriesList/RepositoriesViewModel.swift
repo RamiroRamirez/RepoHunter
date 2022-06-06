@@ -32,7 +32,7 @@ class RepositoriesViewModel {
             .fetchRepositories(with: name)
             .map { $0.prefix(10) }
             .flatMap { $0.publisher.setFailureType(to: Error.self) }
-            .flatMap({ repository in
+            .flatMap { repository in
                 self.repositoryService.fetchBranches(for: repository)
                     .map { branches in
                         RepositoryRepresentation(
@@ -40,12 +40,12 @@ class RepositoriesViewModel {
                             branches: branches
                         )
                     }
-            })
+            }
             .collect()
             .sink(
                 receiveCompletion: { _ in },
-                receiveValue: { repositories in
-                    self.repositories = repositories
+                receiveValue: { [weak self] repositories in
+                    self?.repositories = repositories
                 }
             )
             .store(in: &subscriptions)

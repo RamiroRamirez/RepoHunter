@@ -10,4 +10,9 @@ import Foundation
 class Repository: Decodable {
     let name: String
     let full_name: String
+    
+    init(name: String, fullName: String) {
+        self.name = name
+        self.full_name = fullName
+    }
 }
